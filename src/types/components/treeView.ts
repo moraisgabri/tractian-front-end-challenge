@@ -5,7 +5,9 @@ export interface TreeViewNode extends Asset {
   key: string;
   children: TreeViewNode[];
   type: "component" | "asset" | "location";
+  matchName?: boolean;
   collapsable?: boolean;
+  hidden?: boolean;
 }
 
 export enum NodeType {
