@@ -17,6 +17,19 @@ export const toggleNode = (
   });
 };
 
+export const unHideAllNodes = (nodes: TreeViewNode[]): TreeViewNode[] => {
+  return nodes.map((node) => {
+    if (node.children) {
+      return {
+        ...node,
+        hidden: false,
+        children: unHideAllNodes(node.children),
+      };
+    }
+    return { ...node, hidden: false };
+  });
+};
+
 export const updateAllNodes = (
   nodes: TreeViewNode[],
   isExpanded: boolean
