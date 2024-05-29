@@ -1,0 +1,12 @@
+.contentTitleWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentTitleUnitName {
+  font-size: 1em;
+  font-weight: 300;
+  color: #77818c;
+  margin-left: 0.5em;
+}
