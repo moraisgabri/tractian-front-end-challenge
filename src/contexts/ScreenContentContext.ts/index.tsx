@@ -70,16 +70,15 @@ export const ScreenContentContextProvider: FC<
     useState<boolean>(false);
 
   const treeReducer = (state: TreeViewNode[], action: any) => {
-    console.log("ttt", action);
     switch (action.type) {
       case TreeViewActionType.DefaultTree:
         return action.data;
       case TreeViewActionType.Toggle:
         return toggleNode(state, action.id, action.isExpanded);
       case TreeViewActionType.ExpandAll:
-        return updateAllNodes(state, true);
+        return updateAllNodes(makeNodeTree(locations, assets), true);
       case TreeViewActionType.CollapseAll:
-        return updateAllNodes(state, false);
+        return updateAllNodes(makeNodeTree(locations, assets), false);
       case TreeViewActionType.SearchByFilter:
         return searchNodes(assets, locations, {
           filterEnergyComponent: energySensorTypeFilterSelected,
