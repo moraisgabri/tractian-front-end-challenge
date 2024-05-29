@@ -1,0 +1,14 @@
+.uploadImageWrapper {
+  width: 515px;
+  height: 226px;
+  border: 1px dashed #55a6ff;
+  color: #55a6ff;
+  background-color: #f2f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  gap: 4px;
+  flex-flow: column;
+}
