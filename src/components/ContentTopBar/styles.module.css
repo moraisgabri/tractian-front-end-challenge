@@ -1,0 +1,11 @@
+.contentTopBarWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.contentTopBarBadgesWrapper {
+  display: flex;
+  gap: 8px;
+}
