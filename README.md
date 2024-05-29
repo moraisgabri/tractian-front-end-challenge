@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center"><img width="300" src="./src/assets/LOGO TRACTIAN.svg" />
+<br>Front End Software Engineer
+<br>Challenge
+</h1>
+<p align="center">A dashboard app to display information about assets and locations from a unit</p>
+<br>
 
-## Getting Started
+## Features
 
-First, run the development server:
+Developed functionalities to this project:
+
+- [x] **Asset Tree**: TreeView component that display **locations**, **assets** and **components**. Location and assets are expandable, components are selectable.
+- [x] **Visualization**: Display information from the selected **component**.
+- **Filters**:
+  - [x] **Text Search**: Users can search by name for any item from the tree (**locations**, **assets** or **components**).
+  - [x] **Energy Sensors**: Isolate energy sensors **components**.
+  - [x] **Critical Sensor Status**: Isolate critical status **components**.
+- [x] **Expand All**: Button to expand all **locations** and **assets** with children and clear filters.
+- [x] **Collapse All**: Button to collapse all **locations** and **assets** and clear filters.
+      <br>
+
+## Dependencies
+
+<div>
+  <img width="30" src="https://pics.freeicons.io/uploads/icons/png/14678610731551953708-512.png" /> TypeScript &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img width="30" src="https://pics.freeicons.io/uploads/icons/png/20167174151551942641-512.png" /> React &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img width="30" src="https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-wbsw4aug.png" /> Next.js
+</div>
+
+## Start Project
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+After run this command, you can access your [localhost](http://localhost:3000)
+<br>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Or you can make a production build and start it:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run build && npm run start
+```
 
-## Learn More
+The project will be available on the [localhost](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+## References
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To develop this project, I had to take a look at the following resources:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Notion](https://tractian.notion.site/Front-End-Software-Engineer-cf7f9a91d97647abaf99b2565f8ae8fa) - Requirements and data sets.
+- [Figma](https://www.figma.com/design/F52Yv8RmGoGOYcV9CiuIZ1/[Careers]-Frontend-Challenge-v2?node-id=0-1&t=7t7fZtjL1f5oFgKJ-0) - Frontend Prototype.
