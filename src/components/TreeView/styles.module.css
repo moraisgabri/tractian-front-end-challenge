@@ -1,0 +1,11 @@
+.treeViewWrapper {
+  width: 40%;
+  border: solid 1px #d8dfe6;
+  border-radius: 2px;
+  padding-left: 0;
+  padding-top: 0;
+  margin-top: 0;
+  height: 95%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
