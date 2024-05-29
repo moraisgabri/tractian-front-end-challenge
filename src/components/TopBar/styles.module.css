@@ -1,0 +1,9 @@
+.topBarWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #17192d;
+  height: 4em;
+  padding: 1.2px 2em;
+}
