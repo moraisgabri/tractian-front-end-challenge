@@ -1,0 +1,29 @@
+.treeViewSearchInput {
+  padding: 1em;
+  margin-top: 0px;
+  border: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.treeViewSearchInput::placeholder {
+  color: #77818c;
+  font-weight: 400;
+}
+
+.treeViewSearchInput:focus {
+  outline: none;
+}
+
+.treeViewSearchInputWrapper {
+  display: flex;
+  width: auto;
+  border-bottom: solid 1px #d8dfe6;
+  border-radius: 4px;
+  margin-bottom: 0.5em;
+}
+
+.treeViewSearchInputIcon {
+  margin-right: 0.5em;
+  cursor: pointer;
+}
