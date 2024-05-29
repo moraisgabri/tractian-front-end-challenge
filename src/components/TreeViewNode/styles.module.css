@@ -1,0 +1,47 @@
+.treeNodeWrapper {
+  padding-left: 5px;
+}
+
+.treeNodeOptionWrapper,
+.treeNodeOptionWrapperSelected {
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  height: 1.5em;
+  width: 1000px;
+  size: 14px;
+  /* margin: 0.25em 0; */
+  padding: 2px 0 2px 10px;
+}
+
+.treeNodeOptionWrapper:hover {
+  background-color: #f0f0f0;
+}
+
+.treeNodeOptionWrapperSelected {
+  background-color: #2188ff;
+  color: white;
+}
+
+.treeNodeIcon {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.treeNodeComponentStatusIcon {
+  margin-left: 0.5em;
+}
+
+.treeNodeName {
+  font-weight: 400;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  line-height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.treeNodeName:before {
+  content: attr(title);
+}
