@@ -2,8 +2,11 @@
 <br>Front End Software Engineer
 <br>Challenge
 </h1>
-<p align="center">A dashboard app to display information about assets and locations from a unit</p>
-<br>
+<p align="center">
+A dashboard app to display information about assets and locations from a unit
+</p>
+
+[Deployed on vercel, come take a look](https://zega-morais-tractian-front-end-challenge.vercel.app)
 
 ## Features
 
