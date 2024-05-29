@@ -1,0 +1,24 @@
+.contentBadgeWrapper,
+.contentBadgeWrapperFilter,
+.contentBadgeWrappperSelected {
+  display: flex;
+  padding: 6px 16px;
+  border-radius: 3px;
+  border: 1px solid #d8dfe6;
+  font-weight: 600;
+  background-color: white;
+  color: #77818c;
+  gap: 6px;
+  padding: 6px 16px 6px 14px;
+  cursor: pointer;
+}
+
+.contentBadgeWrapperFilter:hover {
+  background-color: #2188ff;
+  color: white;
+}
+
+.contentBadgeWrappperSelected {
+  background-color: #2188ff;
+  color: white;
+}
