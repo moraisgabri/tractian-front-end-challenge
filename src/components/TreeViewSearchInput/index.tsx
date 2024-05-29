@@ -2,6 +2,7 @@ import React, {
   ChangeEvent,
   FC,
   HTMLInputTypeAttribute,
+  KeyboardEvent,
   useState,
 } from "react";
 import Image from "next/image";
@@ -31,12 +32,19 @@ export const TreeViewSearchInput: FC = () => {
     });
   };
 
+  const onPressEnter = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      onSearch();
+    }
+  };
+
   return (
     <div className={styles.treeViewSearchInputWrapper}>
       <input
         placeholder="Buscar Ativo ou Local"
         className={styles.treeViewSearchInput}
         onChange={handleSearch}
+        onKeyUp={onPressEnter}
       />
       <Image
         className={styles.treeViewSearchInputIcon}
