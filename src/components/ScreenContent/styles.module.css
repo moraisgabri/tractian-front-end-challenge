@@ -1,0 +1,91 @@
+.screenContentWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+  width: 72%;
+  border: 1px solid #d8dfe6;
+  border-radius: 2px;
+}
+
+.componentContentTitleWrapper {
+  display: flex;
+  align-items: center;
+  padding: 1em 1.4em;
+  border-bottom: 1px solid #d8dfe6;
+  gap: 8px;
+}
+.componentContentTitle {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.componentDescription {
+  padding: 24px 0;
+  display: flex;
+  border-bottom: 1px solid #d8dfe6;
+  margin: 0 1.4em;
+}
+
+.sectionTitle {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 0.5em;
+}
+
+.sectionValue {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 0.5em;
+  color: #88929c;
+}
+
+.gearSeactionWrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  margin-left: 1.5em;
+}
+
+.sectionWrapper {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  padding: 1.4em 0em;
+  gap: 8px;
+}
+
+.responsibleSectionValueWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.responsibleSectionSymbol {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #2188ff;
+  height: 24px;
+  width: 24px;
+  margin-bottom: 0.5em;
+  border-radius: 100%;
+  align-content: center;
+  color: white;
+}
+
+.hardwareDataWrapper {
+  display: flex;
+  gap: 24px;
+  padding: 1em 1.4em;
+}
+
+.hardwareValueWrapper {
+  display: flex;
+  gap: 8px;
+}
