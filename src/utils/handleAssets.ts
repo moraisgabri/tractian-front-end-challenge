@@ -1,5 +1,5 @@
 import { TreeViewNode } from "@/types/components/treeView";
-import { nodeHasName } from "./nodeHasName";
+import { nodeHasName } from "./misc/nodeHasName";
 
 export function handleAssets(
   rawAssets: Asset[],

@@ -1,6 +1,6 @@
 import { handleAssets, handleAssetsByName } from "./handleAssets";
-import { getUniqueItems } from "./getUniqueItems";
-import { nodeHasName } from "./nodeHasName";
+import { getUniqueItems } from "./misc/getUniqueItems";
+import { nodeHasName } from "./misc/nodeHasName";
 import { unHideAllNodes } from "./treeViewReducer";
 
 function makeTree(
