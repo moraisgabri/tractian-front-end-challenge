@@ -1,0 +1,31 @@
+.mainButton,
+.mainButtonSelected {
+  background-color: #013b78;
+  padding: 4px 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 8px;
+  color: white;
+  size: 2em;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+.mainButton:hover {
+  background-color: #1873db;
+}
+
+.mainButtonSelected {
+  background-color: #5da5ff;
+}
+
+.mainButtonContentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mainButtonIcon {
+  margin-right: 0.5em;
+}
