@@ -1,4 +1,5 @@
 import { TreeViewNode } from "@/types/components/treeView";
+import { nodeHasName } from "./nodeHasName";
 
 export function handleAssets(
   rawAssets: Asset[],
@@ -64,7 +65,6 @@ export function handleAssets(
       if (asset.parentId) {
         componentsWithAssetParent.push({
           ...asset,
-          name: asset.sensorType,
           children: [],
           key: asset.id,
           type: "component",
@@ -75,7 +75,6 @@ export function handleAssets(
 
       componentsWithLocationParent.push({
         ...asset,
-        name: asset.sensorType,
         children: [],
         key: asset.id,
         type: "component",
@@ -110,39 +109,23 @@ export function handleAssetsByName(
 } {
   const componentsWithAssetParent: TreeViewNode[] = [];
   const componentsWithLocationParent: TreeViewNode[] = [];
-
   const firstLevelComponents: TreeViewNode[] = [];
-  let unCollapsable: boolean = searchConfig ? true : false;
 
   let components = rawAssets.filter((asset) => asset.sensorType);
   const assets = rawAssets
     .filter((asset) => !asset.sensorType)
     .map((asset) => ({ ...asset, type: "asset" }));
 
-  const nodeHasName = (node: any) =>
-    node.name.toLowerCase().includes(searchConfig.searchName.toLowerCase());
-
-  if (searchConfig) {
-    let alertStatusComponents: any = [];
-    let energyComponents: any = [];
-
-    if (searchConfig.filterEnergyComponent) {
-      energyComponents = components.filter(nodeHasName);
-    }
-
-    if (searchConfig.filterAlertStatus) {
-      alertStatusComponents = components.filter(nodeHasName);
-    }
-
-    components = [...alertStatusComponents, ...energyComponents];
-  }
-
-  const iterableAssets = searchConfig ? [...components, ...assets] : rawAssets;
+  const iterableAssets = rawAssets;
 
   for (const asset of iterableAssets) {
+    const matchName = nodeHasName(asset, searchConfig.searchName);
+
     if (!asset.parentId && !asset.locationId) {
       firstLevelComponents.push({
         ...asset,
+        matchName,
+        hidden: !matchName,
         children: [],
         key: asset.id,
         type: asset.sensorType ? "component" : "asset",
@@ -155,22 +138,22 @@ export function handleAssetsByName(
       if (asset.parentId) {
         componentsWithAssetParent.push({
           ...asset,
-          name: asset.sensorType,
+          matchName,
+          hidden: !matchName,
           children: [],
           key: asset.id,
           type: "component",
-          collapsable: !unCollapsable,
         });
         continue;
       }
 
       componentsWithLocationParent.push({
         ...asset,
-        name: asset.sensorType,
+        matchName,
         children: [],
         key: asset.id,
+        hidden: !matchName,
         type: "component",
-        collapsable: !unCollapsable,
       });
       continue;
     }
